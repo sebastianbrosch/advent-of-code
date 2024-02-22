@@ -42,3 +42,5 @@ if ((Test-Path -PathType Leaf "AoC/Solution.java") -and (Test-Path -PathType Con
 }
 
 (Get-Content $filePathSolution).Replace('package AoC;', "package AoC$year.Day$formatDay;") | Set-Content $filePathSolution
+
+Write-Host "Advent of Code: https://adventofcode.com/$Year/day/$Day"
