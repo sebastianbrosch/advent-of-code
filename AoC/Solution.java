@@ -7,6 +7,7 @@ public class Solution extends AoC.BaseSolution {
 
   /**
    * The main method. This method runs the solution.
+   *
    * @param args The command line arguments.
    */
   public static void main(String[] args) {
@@ -17,6 +18,7 @@ public class Solution extends AoC.BaseSolution {
 
   /**
    * This function executes the first part of the puzzle.
+   *
    * @return The solution of the first part of the puzzle.
    */
   public static String solve1() {
@@ -25,6 +27,7 @@ public class Solution extends AoC.BaseSolution {
 
   /**
    * This function executes the second part of the puzzle.
+   *
    * @return The solution of the second part of the puzzle.
    */
   public static String solve2() {
