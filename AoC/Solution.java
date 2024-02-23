@@ -2,6 +2,9 @@ package AoC;
 
 /**
  * A solution for Advent of Code.
+ *
+ * @see https://adventofcode.com/$Year/day/$Day
+ * @see https://adventofcode.com/$Year/day/$Day/input
  */
 public class Solution extends AoC.BaseSolution {
 
@@ -9,8 +12,6 @@ public class Solution extends AoC.BaseSolution {
    * The main method. This method runs the solutions.
    *
    * @param args The command line arguments.
-   * @see https://adventofcode.com/$Year/day/$Day
-   * @see https://adventofcode.com/$Year/day/$Day/input
    */
   public static void main(String[] args) {
     System.out.println(Solution.class.getPackageName());

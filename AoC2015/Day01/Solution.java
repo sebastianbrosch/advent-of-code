@@ -2,6 +2,9 @@ package AoC2015.Day01;
 
 /**
  * A solution for Advent of Code.
+ *
+ * @see https://adventofcode.com/2015/day/1
+ * @see https://adventofcode.com/2015/day/1/input
  */
 public class Solution extends AoC.BaseSolution {
 
