@@ -6,9 +6,11 @@ package AoC;
 public class Solution extends AoC.BaseSolution {
 
   /**
-   * The main method. This method runs the solution.
+   * The main method. This method runs the solutions.
    *
    * @param args The command line arguments.
+   * @see https://adventofcode.com/$Year/day/$Day
+   * @see https://adventofcode.com/$Year/day/$Day/input
    */
   public static void main(String[] args) {
     System.out.println(Solution.class.getPackageName());

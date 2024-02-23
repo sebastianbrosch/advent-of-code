@@ -43,6 +43,8 @@ if ((Test-Path -PathType Leaf "AoC/Solution.java") -and (Test-Path -PathType Con
 }
 
 (Get-Content $filePathSolution).Replace('package AoC;', "package AoC$year.Day$formatDay;") | Set-Content $filePathSolution
+(Get-Content $filePathSolution).Replace('$Year', "$Year") | Set-Content $filePathSolution
+(Get-Content $filePathSolution).Replace('$Day', "$Day") | Set-Content $filePathSolution
 
 Write-Host "Advent of Code $Year - Day ${formatDay}: $urlPuzzle"
 Write-Host "Advent of Code $Year - Day ${formatDay} - Input: $urlPuzzle/input"
