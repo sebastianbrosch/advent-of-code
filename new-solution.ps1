@@ -32,6 +32,7 @@ if ((-not $Day) -or ($Day -lt 1) -or ($Day -gt 25)) {
 $formatDay = '{0:d2}' -f $Day
 $folderPathDay = "AoC$Year/Day$formatDay";
 $filePathSolution = "$folderPathDay/Solution.java"
+$urlPuzzle = "https://adventofcode.com/$Year/day/$Day"
 
 if (-not (Test-Path -PathType Container $folderPathDay)) {
   New-Item -ItemType Directory -Path $folderPathDay | Out-Null
@@ -43,4 +44,8 @@ if ((Test-Path -PathType Leaf "AoC/Solution.java") -and (Test-Path -PathType Con
 
 (Get-Content $filePathSolution).Replace('package AoC;', "package AoC$year.Day$formatDay;") | Set-Content $filePathSolution
 
-Write-Host "Advent of Code: https://adventofcode.com/$Year/day/$Day"
+Write-Host "Advent of Code $Year - Day ${formatDay}: $urlPuzzle"
+Write-Host "Advent of Code $Year - Day ${formatDay} - Input: $urlPuzzle/input"
+
+Start-Process $urlPuzzle
+Start-Process "$urlPuzzle/input"
