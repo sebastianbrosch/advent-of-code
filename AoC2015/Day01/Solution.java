@@ -6,14 +6,14 @@ package AoC2015.Day01;
 public class Solution extends AoC.BaseSolution {
 
   /**
-   * The main method. This method runs the solution.
+   * The main method. This method runs the solutions.
    *
    * @param args The command line arguments.
    */
   public static void main(String[] args) {
     System.out.println(Solution.class.getPackageName());
-    System.out.printf(" - Part 1: %s\n", solve1()); // solution: 138
-    System.out.printf(" - Part 2: %s\n", solve2()); // solution: 1771
+    System.out.printf(" - Part 1: %s\n", solve1());
+    System.out.printf(" - Part 2: %s\n", solve2());
   }
 
   /**
@@ -23,20 +23,13 @@ public class Solution extends AoC.BaseSolution {
    */
   public static String solve1() {
     String input = getInputString("AoC2015/Day01/input.txt");
-    Integer cntUp = 0;
-    Integer cntDown = 0;
+    int floor = 0;
 
-    char[] inputChars = input.toCharArray();
-
-    for (Integer i = 0; i < inputChars.length; i++) {
-      if (inputChars[i] == '(') {
-        cntUp++;
-      } else {
-        cntDown++;
-      }
+    for (char value : input.toCharArray()) {
+      floor += (value == '(') ? 1 : -1;
     }
 
-    return Integer.toString(cntUp - cntDown);
+    return Integer.toString(floor);
   }
 
   /**
@@ -46,19 +39,14 @@ public class Solution extends AoC.BaseSolution {
    */
   public static String solve2() {
     String input = getInputString("AoC2015/Day01/input.txt");
-    Integer cntUp = 0;
-    Integer cntDown = 0;
+    int floor = 0;
 
-    char[] inputChars = input.toCharArray();
+    char[] chars = input.toCharArray();
 
-    for (Integer i = 0; i < inputChars.length; i++) {
-      if (inputChars[i] == '(') {
-        cntUp++;
-      } else {
-        cntDown++;
-      }
+    for (int i = 0; i < chars.length; i++) {
+      floor += (chars[i] == '(') ? 1 : -1;
 
-      if (cntUp - cntDown == -1) {
+      if (floor == -1) {
         return Integer.toString(i + 1);
       }
     }
