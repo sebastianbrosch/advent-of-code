@@ -36,8 +36,11 @@ if ((-not (Get-Command java -ErrorAction SilentlyContinue)) -or (-not (Get-Comma
 $formatDay = '{0:d2}' -f $Day
 $folderPathDay = "AoC$Year/Day$formatDay"
 $filePathSolution = "$folderPathDay/Solution.java"
+$urlPuzzle = "https://adventofcode.com/$Year/day/$Day"
 
 if (Test-Path $filePathSolution -PathType Leaf) {
   javac $filePathSolution
   java $filePathSolution.Replace('/', '.').Replace('.java', '')
 }
+
+Write-Host "Advent of Code $Year - Day ${formatDay}: $urlPuzzle"

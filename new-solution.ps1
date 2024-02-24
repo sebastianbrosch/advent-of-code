@@ -39,7 +39,9 @@ if (-not (Test-Path -PathType Container $folderPathDay)) {
 }
 
 if ((Test-Path -PathType Leaf "AoC/Solution.java") -and (Test-Path -PathType Container $folderPathDay)) {
-  Copy-Item "AoC/Solution.java" -Destination $folderPathDay
+  if (-not (Test-Path -PathType Leaf "$folderPathDay/Solution.java")) {
+    Copy-Item "AoC/Solution.java" -Destination $folderPathDay
+  }
 }
 
 (Get-Content $filePathSolution).Replace('package AoC;', "package AoC$year.Day$formatDay;") | Set-Content $filePathSolution
