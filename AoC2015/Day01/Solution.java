@@ -26,13 +26,13 @@ public class Solution extends AoC.BaseSolution {
    */
   public static String solve1() {
     String input = getInputString("AoC2015/Day01/input.txt");
-    int floor = 0;
+    Integer floor = 0;
 
     for (char value : input.toCharArray()) {
       floor += (value == '(') ? 1 : -1;
     }
 
-    return Integer.toString(floor);
+    return floor.toString();
   }
 
   /**
