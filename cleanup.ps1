@@ -1,0 +1,1 @@
+Get-ChildItem -Path . -Include *.class -File -Recurse | ForEach-Object { $_.Delete() }
