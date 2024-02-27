@@ -15,8 +15,8 @@ public class Solution extends AoC.BaseSolution {
    */
   public static void main(String[] args) {
     System.out.println(Solution.class.getPackageName());
-    System.out.printf(" - Part 1: %s\n", solve1());
-    System.out.printf(" - Part 2: %s\n", solve2());
+    System.out.printf(" - Part 1: %s\n", Solution.part1());
+    System.out.printf(" - Part 2: %s\n", Solution.part2());
   }
 
   /**
@@ -24,7 +24,7 @@ public class Solution extends AoC.BaseSolution {
    *
    * @return The solution of the first part of the puzzle.
    */
-  public static String solve1() {
+  private static String part1() {
     return "";
   }
 
@@ -33,7 +33,7 @@ public class Solution extends AoC.BaseSolution {
    *
    * @return The solution of the second part of the puzzle.
    */
-  public static String solve2() {
+  private static String part2() {
     return "";
   }
 }
