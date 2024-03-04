@@ -1,6 +1,5 @@
 package AoC2015.Day05;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**
