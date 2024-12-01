@@ -1,10 +1,10 @@
 root=true
 
-[*.{ps1,java}]
+[*.{ps1,java,cc}]
 charset = utf-8
 indent_size = 2
 indent_style = space
 trim_trailing_whitespace = true
 
-[*.java]
+[*.{java,cc}]
 insert_final_newline = true
