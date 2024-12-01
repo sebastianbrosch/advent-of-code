@@ -10,23 +10,24 @@ This repository is used to store my solutions for Advent of Code. I'm using the 
 - [Advent of Code 2021](https://adventofcode.com/2021)
 - [Advent of Code 2022](https://adventofcode.com/2022)
 - [Advent of Code 2023](https://adventofcode.com/2023) - [Solutions](AoC2023) (Java)
+- [Advent of Code 2024](https://adventofcode.com/2024) - [Solutions](AoC2024) (C++)
 
 ## Powershell Scripts
-You can create a new solution using the script `New-Solution`. An existing solution can be executed with the script `Run-Solution`. To create and run the solution for Advent of Code 2023 - Day 1 you can use the scripts like this:
+You can create a new solution using the script `New-Solution`. An existing solution can be executed with the script `Run-Solution`. To create and run the solution for Advent of Code 2024 - Day 1 using C++ you can use the scripts like this:
 
 ```
-.\New-Solution 2023 1
-.\Run-Solution 2023 1
+.\New-Solution 2024 1 C++
+.\Run-Solution 2024 1 C++
 ```
 
 You can also use the named parameters to run the scripts:
 
 ```
-.\New-Solution -Year 2023 -Day 1
-.\Run-Solution -Year 2023 -Day 1
+.\New-Solution -Year 2024 -Day 1 -Language C++
+.\Run-Solution -Year 2024 -Day 1 -Language C++
 ```
 
-It is also possible to remove all compiled files (`.class`) using the script `Cleanup`:
+It is also possible to remove all compiled files (`.class`, `.exe`) using the script `Cleanup`:
 
 ```
 .\Cleanup
